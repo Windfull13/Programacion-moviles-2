@@ -1,22 +1,26 @@
 # MiPrimeraApp
 
-Implementación del taller de Android Studio con Kotlin en una app funcional de **lista de tareas** usando **View Binding** y **RecyclerView**.
+Proyecto Android en Kotlin basado en el taller de clase. La app implementa una lista de tareas con `RecyclerView` y `View Binding`, permite marcar tareas completadas, elimina tareas y muestra el contador de pendientes.
 
-## Qué incluye
+## Funcionalidades
 
-- Crear y eliminar tareas
-- Marcar tareas como completadas
-- Contador de tareas pendientes
-- Layouts XML del taller
-- Documentación de las 7 partes del taller en `docs/taller/`
+- Agregar tareas
+- Marcar/desmarcar tareas como completadas
+- Eliminar tareas
+- Contador de tareas pendientes en tiempo real
+- Persistencia local de la lista al cerrar y abrir la app
 
-## Paquete usado
+## Tecnologías
 
-El proyecto real usa el paquete:
+- Kotlin
+- Android SDK (minSdk 24)
+- `RecyclerView`
+- `View Binding`
+- `SharedPreferences` + `Gson` para persistencia local
+
+## Paquete del proyecto
 
 - `com.example.miprimeraapp`
-
-La guía adjunta usa `com.ejemplo.miprimeraapp`; aquí se mantuvo el paquete actual del proyecto para evitar romper la configuración existente.
 
 ## Archivos principales
 
@@ -26,26 +30,34 @@ La guía adjunta usa `com.ejemplo.miprimeraapp`; aquí se mantuvo el paquete act
 - `app/src/main/res/layout/activity_main.xml`
 - `app/src/main/res/layout/item_tarea.xml`
 
-## Cómo ejecutar
+## Ejecutar el proyecto
 
 ```powershell
 .\gradlew.bat assembleDebug
 ```
 
-Si tienes un emulador o dispositivo conectado:
+Con dispositivo o emulador conectado:
 
 ```powershell
 .\gradlew.bat installDebug
 ```
 
-## Documentación del taller
+## Respuestas del cierre del taller
 
-- `docs/taller/README.md`
-- `docs/taller/parte-1-configuracion.md`
-- `docs/taller/parte-2-kotlin.md`
-- `docs/taller/parte-3-ejercicios.md`
-- `docs/taller/parte-4-estructura-android.md`
-- `docs/taller/parte-5-lista-tareas.md`
-- `docs/taller/parte-6-cierre.md`
-- `docs/taller/parte-7-extensiones.md`
+1. **¿Cuál es la diferencia entre `val` y `var`?**
+   - `val` declara una referencia inmutable (no se puede reasignar).
+   - `var` declara una referencia mutable (sí se puede reasignar).
 
+2. **¿Para qué sirve el operador `?:` (Elvis)?**
+   - Sirve para dar un valor por defecto cuando una expresión nullable es `null`.
+   - Ejemplo: `val texto = nombre ?: "Sin nombre"`.
+
+3. **¿Qué genera automáticamente una `data class` que una clase normal no?**
+   - Genera automáticamente `toString()`, `equals()`, `hashCode()`, `copy()` y `componentN()`.
+
+4. **¿Qué hace el Adapter en un RecyclerView?**
+   - Conecta los datos con las vistas de cada item.
+   - Crea ViewHolders y enlaza cada elemento de la lista con su fila visual.
+
+5. **¿Por qué usar View Binding en lugar de `findViewById`?**
+   - Porque es type-safe, reduce errores por IDs incorrectos y hace el código más limpio.
