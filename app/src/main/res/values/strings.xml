@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MiPrimeraApp</string>
+    <string name="tasks_title">Mis Tareas</string>
+    <string name="task_hint">Escribe una tarea…</string>
+    <string name="add_task">Agregar</string>
+    <string name="pending_tasks_default">0 tareas pendientes</string>
+    <string name="pending_tasks_format">%1$d tareas pendientes</string>
+    <string name="delete_task">Eliminar tarea</string>
+    <string name="write_task_first">Escribe una tarea primero</string>
+</resources>
